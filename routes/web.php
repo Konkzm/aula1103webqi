@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/' , [AlunoController::class, 'index'])->name('aluno-index');
 Route::get('aluno/create' , [AlunoController::class , 'create'])->name('aluno-create');
 Route::post('/aluno', [AlunoController::class, 'store'])->name('aluno-store');
