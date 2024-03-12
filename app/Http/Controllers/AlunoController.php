@@ -14,9 +14,10 @@ class AlunoController extends Controller
     }
     public function store(Request $resposta){
         try{
-            Aluno::create($resposta->all());
+            Aluno::create($resposta->all()); //testando
+            echo "Cadastrado com Sucesso";
         }catch(Exception $e){
-
+            echo $e->getMessage(); //testando
         }
             
     }
