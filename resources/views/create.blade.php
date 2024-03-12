@@ -3,7 +3,8 @@
 @section('content')
 
     <section class="container">
-    <form>
+    <form action="{{route('aluno-store')}}" method="POST">
+        @csrf
         <fieldset>
             <legend>
                 Cadastrar aluno 

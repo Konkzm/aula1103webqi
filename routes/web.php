@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('aluno/create' , [AlunoController::class , 'create'])->name('aluno-create');
+Route::post('/aluno', [AlunoController::class, 'store'])->name('aluno-store');
