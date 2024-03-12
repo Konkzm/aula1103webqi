@@ -18,7 +18,7 @@ class AlunoController extends Controller
     public function store(Request $resposta){
         try{
             Aluno::create($resposta->all()); //testando
-            echo "Cadastrado com Sucesso";
+            return redirect()->route('aluno-index')->with('success', 'deu bom');
         }catch(Exception $e){
             echo $e->getMessage(); //testando
         }
