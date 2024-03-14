@@ -1,7 +1,11 @@
 @extends('layout.layout')
 
 @section('content')
-    <table class="table">
+
+    <a href="">
+        <button>Novo registro</button>
+
+    <table class="table table-dark">
         <thead>
             <tr>
                 <th scope="col">ID</th>
