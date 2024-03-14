@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <a href="">
-        <button>Novo registro</button>
+    <a href="{{route('aluno-create')}}">
+        <button class="btn btn-success">Novo registro</button>
 
-    <table class="table table-dark">
+    <table class="table table-dark table-striped p-2 mt-5">
         <thead>
             <tr>
                 <th scope="col">ID</th>
