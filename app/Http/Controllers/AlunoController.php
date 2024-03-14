@@ -10,7 +10,8 @@ class AlunoController extends Controller
 {
     //
     public function index(){
-        return view('welcome');
+        $alunos = Aluno::all();
+        return view('welcome', ['alunos'=>$alunos]);
     }
     public function create(){
         return view('create');
@@ -18,10 +19,11 @@ class AlunoController extends Controller
     public function store(Request $resposta){
         try{
             Aluno::create($resposta->all()); //testando
-            return redirect()->route('aluno-index')->with('success', 'Cadastrado com Sucesso!');
+            return redirect()->route('aluno-create')->with('success', 'Cadastrado com Sucesso!');
         }catch(Exception $e){
-            return redirect()->route('aluno-index')->with('error', 'tente novamente mais tarde');
+            return redirect()->route('aluno-create')->with('error', 'tente novamente mais tarde');
         }
             
     }
 }
+
